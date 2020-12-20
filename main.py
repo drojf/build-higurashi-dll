@@ -43,6 +43,7 @@ def main():
         ChapterInformation('tsumi-mod',  'HigurashiEp06_Data', 'experimental-drojf-dll-ep6'),
         ChapterInformation('mina-mod',   'HigurashiEp07_Data', 'experimental-drojf-dll-ep7'),
         ChapterInformation('matsuri-mod','HigurashiEp08_Data', 'experimental-drojf-dll-ep8'),
+        ChapterInformation('console-arcs', 'HigurashiEp04_Data', 'experimental-drojf-dll-console'),
     ]
 
     if not os.path.exists(msbuild_path):
@@ -57,7 +58,7 @@ def main():
     for chapter in chapters:
         print(f">>>> Building {chapter.branch_name}")
         built_dll_path = os.path.join(higurashi_assembly_repo_path, 'bin', 'Release', 'Assembly-CSharp.dll')
-        output_chapter_folder = os.path.join(output_folder_base, chapter.data_folder_name)
+        output_chapter_folder = os.path.join(output_folder_base, chapter.branch_name, chapter.data_folder_name)
         output_dll_folder = os.path.join(output_chapter_folder, 'Managed')
         output_dll_path = os.path.join(output_dll_folder, 'Assembly-CSharp.dll')
         output_archive_path = os.path.join('archive_output', chapter.archive_name)
