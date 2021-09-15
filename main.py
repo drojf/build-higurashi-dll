@@ -30,7 +30,7 @@ def zip(input_path, output_filename):
 
 def main():
     msbuild_path = 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe'
-    higurashi_assembly_repo_path = 'C:\\drojf\\large_projects\\umineko\\higurashi-assembly-test-merge-3'
+    higurashi_assembly_repo_path = 'C:\\drojf\\large_projects\\umineko\\higurashi-assembly'
     sln_path = os.path.join(higurashi_assembly_repo_path, 'Assembly-CSharp.sln')
     output_folder_base = r'output'
 
