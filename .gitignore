@@ -1,6 +1,7 @@
 .idea
 archive_output
 output
+assets
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
